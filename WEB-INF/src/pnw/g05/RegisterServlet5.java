@@ -76,27 +76,62 @@ public class RegisterServlet5 extends HttpServlet {
                 }
             }
 
-            // SQL文二つ目
-            String sql_2 = "INSERT INTO user_info(user_id, user_name, user_pass) VALUES(?, ?, ?)";
-
             // ユーザーidが一番大きくなるよう設定
             int new_id = id_max + 1;
             String input_id = Integer.toString(new_id);
 
+            // SQL文二つ目
+            String sql = "SELECT * FROM user_info where user_name=? and user_pass=?";
+
+            // JDBCドライバのロード
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            // データベース接続
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/2023g05?serverTimezone=JST", "root", "");
             // SQL実行準備
-            stmt = con.prepareStatement(sql_2);
+            stmt = con.prepareStatement(sql);
+            stmt.setString(1, input_username);
+            stmt.setString(2, input_password);
 
-            // 登録するIDと名前とパスワードをセットする
-            stmt.setString(1, input_id);
-            stmt.setString(2, input_username);
-            stmt.setString(3, input_password);
+            // 実行結果取得
+            rs = stmt.executeQuery();
+            // データがなくなるまで(rs.next()がfalseになるまで)繰り返す
+            int cnt = 0;
+            ArrayList<String> nameArray = new ArrayList<String>();
+            while (rs.next()) {
+                // カラムの値を取得する．
+                String name = rs.getString("user_name");
+                String pass = rs.getString("user_pass");
+                nameArray.add(name);
+                nameArray.add(pass);
+                // 両方見つかった
+                cnt++;
+            }
+            if (cnt == 0) {
+                // SQL文三つ目
+                String sql_3 = "INSERT INTO user_info(user_id, user_name, user_pass) VALUES(?, ?, ?)";
 
-            // SQL実行
-            stmt.executeUpdate();
+                // SQL実行準備
+                stmt = con.prepareStatement(sql_3);
 
-            // 登録完了ページに遷移
-            request.setAttribute("name", input_username);
-            forwardURL = "/g05/regis_get.jsp";
+                // 登録するIDと名前とパスワードをセットする
+                stmt.setString(1, input_id);
+                stmt.setString(2, input_username);
+                stmt.setString(3, input_password);
+
+                // SQL実行
+                stmt.executeUpdate();
+
+                // 登録完了ページに遷移
+                request.setAttribute("name", input_username);
+                forwardURL = "/g05/regis_get.jsp";
+            } else {
+                String uname = nameArray.get(0);
+                String upass = nameArray.get(1);
+                request.setAttribute("username", uname);
+                request.setAttribute("pass", upass);
+                forwardURL = "/g05/duplication.jsp";
+
+            }
 
         } catch (Exception e) {
             // 何らかの理由で失敗したらエラーページにエラー文を渡して表示。
