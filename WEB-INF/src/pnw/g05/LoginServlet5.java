@@ -85,7 +85,6 @@ public class LoginServlet5 extends HttpServlet {
                 // 最初の要素をunameとする．
                 String uname = nameArray.get(0);
                 request.setAttribute("username", uname);
-                UserInfoBean name = new UserInfoBean(user_pass, user_name);
                 forwardURL = "/g05/success.jsp";
 
             }

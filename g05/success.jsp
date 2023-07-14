@@ -14,6 +14,6 @@ String username = (String)request.getAttribute("username");
 <div class="main">
     <p class="title" align="center">ログイン成功</p>
     <p align="center"><%=username%>さん，こんにちは。</p>
-    <p class="trans" align="center"><a href="main.jsp">メインページへ</p>
+    <p class="trans" align="center"><a href="http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/main/main.jsp">メインページへ</p>
 </body>
 </html>
