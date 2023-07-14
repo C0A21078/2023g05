@@ -1,0 +1,179 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダースタイル */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* ナビゲーションスタイル */
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+
+/* サイドバースタイル */
+.sidebarR {
+  background-color: #f2f2f2;
+  padding: 15px;
+  width: 120px;
+  float: right;
+}
+.sidebarR h2 {
+  font-size: 18px;
+}
+
+.sidebarL {
+  background-color: #f2f2f2;
+  padding: 15px;
+  width: 120px;
+  float: left;
+}
+.sidebarL h2 {
+  font-size: 18px;
+}
+
+/* メインコンテンツスタイル */
+.main-content {
+  padding: 20px;
+  margin-left: 220px;
+}
+
+.genre-content {
+  display: block;
+  text-align: center;
+}
+
+.gamegenre{
+  display: flex;
+}
+
+.gamegenre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
+/* フッタースタイル */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  clear: both;
+}
+
+/* タブの大きさ */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* タブの間隔*/
+nav ul li {
+  display: inline-block;
+  margin-right: 5px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+/* タブの下線 */
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.5s ease-out;
+}
+
+/* 切り替え時の色 */
+nav ul li a.active {
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+}
+
+/* 切り替えタブ */
+.genre-content {
+  display: none;
+  animation: fade-in 0.5s ease-out;
+}
+
+.active {
+  border-bottom: 2px solid #333;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.board {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.board h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.board form {
+  text-align: left;
+}
+
+.board label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.board input[type="text"],
+.board textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.board input[type="submit"],
+.board input[type="button"],
+.board .list-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sidebarR ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarR ul li {
+  margin-bottom: 10px;
+}

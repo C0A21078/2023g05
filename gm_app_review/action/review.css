@@ -1,0 +1,88 @@
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .logo {
+    width: 10%;
+    height: auto;
+  }
+  
+  .brand {
+    font-size: 15px;
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slider img {
+    height: auto;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .slider-button-left {
+    left: 10px;
+  }
+  
+  .slider-button-right {
+    right: 10px;
+  }
+  
+  .collapse-content {
+    display: none;
+  }
+  
+  .collapse-toggle {
+    cursor: pointer;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .collapse-toggle {
+    cursor: pointer;
+  }
+  
