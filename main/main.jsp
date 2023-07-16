@@ -81,9 +81,11 @@
   <img src="../gm_img/Ad/bb2.png" alt="Ad 2">
   <img src="../gm_img/Ad/bb3.png" alt="Ad 3">
   <img src="../gm_img/Ad/bb4.png" alt="Ad 4">
-  <a href="http://pnw.cloud.cs.priv.teu.ac.jp:8080/c0a2107885/main/main.jsp">緊急用URL<br>
-                                                                             以下の機能で日本語だけ文字化けするので<br>
-                                                                             レビューの追記、掲示板の追記、更新、削除</a>
+  <a href="http://pnw.cloud.cs.priv.teu.ac.jp:8080/c0a2107885/main/main.jsp">緊急用URL⇒テスト環境へ<br>
+                                                                             以下の機能で日本語だけ<br>
+                                                                             文字化けするので<br>
+                                                                             「レビューの追記,<br>掲示板の追記」<br>
+                                                                            また、掲示板の更新と削除が動かない<br></a>
 </div>
   
 
