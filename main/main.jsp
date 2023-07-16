@@ -6,7 +6,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>ウェブページのタイトル</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse</title>
+    <link rel="icon" href="../gm_img/icon.jpg">
     <link rel="stylesheet" href="main.css">
 </head>
 <script>
@@ -30,14 +32,32 @@
       document.getElementById("action").style.display = "block";
       document.querySelector("nav ul li a").classList.add("active");
   });
-
 </script>
-</head>
 
 <body>
-<header>
-  <h1>ヘッダー</h1>
-</header>
+
+  <header class="header-container">
+    <img src="../gm_img/icon-kiri.png" alt="GameVerseのロゴ" class="logo">
+    <h1 class="title">GameVerse</h1>
+
+    <div class="header-buttons">
+      <!-- 検索バー -->
+      <div class="search-bar">
+        <input type="text" placeholder="検索...">
+        <button>検索</button>
+      
+        <span>&nbsp;</span>
+      
+      <!-- お気に入りボタン -->
+      <button id="myButton" onclick="myFunction3()">お気に入り</button>
+      <script>
+      function myFunction3() {
+        window.location.href = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/main/add_favorite.jsp";
+      }
+      </script>
+      </div>
+  </header>
+    
 
 <!--タブの中身-->
 <nav>
@@ -56,14 +76,12 @@
 </nav>
 
 <div class="sidebarR">
-  <h2>サイドバー(右)</h2>
-  <p>サイドバーのコンテンツ</p>
+  <img src="../gm_img/Ad/bb0.png" alt="Ad 0">
+  <img src="../gm_img/Ad/bb1.png" alt="Ad 1">
+  <img src="../gm_img/Ad/bb2.png" alt="Ad 2">
+  <img src="../gm_img/Ad/bb3.png" alt="Ad 3">
+  <img src="../gm_img/Ad/bb4.png" alt="Ad 4">
 </div>
-
-<div class="sidebarL">
-    <h2>サイドバー(左)</h2>
-    <p>サイドバーのコンテンツ</p>
-  </div>
   
 
 <div class="main-content">
@@ -93,13 +111,13 @@
                 int gameID = rs.getInt("game_id");
                 if (gameID == 7) {
                   imageURL = "../gm_img/action/flashparty.jpg";
-                  redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/c0a2107885/gm_app_review/action/review.jsp";
+                  redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/action/flashparty/review.jsp";
                 } else if (gameID == 8) {
                   imageURL = "../gm_img/action/mariorun.jpg";
-                  redirectURL = "https://example.com/mariorun";
+                  redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/action/mariorun/review.jsp";
                 } else if (gameID == 9) {
                   imageURL = "../gm_img/action/monsuto.jpg";
-                  redirectURL = "https://example.com/monsuto";
+                  redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/action/monsuto/review.jsp";
                 }
           %>
                 <div class="game-info">
@@ -153,13 +171,13 @@
                       int gameID = rs.getInt("game_id");
                       if (gameID == 1) {
                           imageURL = "../gm_img/rpg/dorakuev.jpg"; 
-                          redirectURL = "https://example.com/flashparty";
+                          redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/rpg/dorakuev/review.jsp";
                       } else if (gameID == 2) {
                           imageURL = "../gm_img/rpg/genshin.jpg";
-                          redirectURL = "https://example.com/flashparty";
+                          redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/rpg/genshin/review.jsp";
                       } else if (gameID == 3) {
                           imageURL = "../gm_img/rpg/haripota.jpg";
-                          redirectURL = "https://example.com/flashparty";
+                          redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/rpg/haripota/review.jsp";
                       }
         
                       %>
@@ -276,13 +294,13 @@
                       int gameID = rs.getInt("game_id");
                       if (gameID == 22) {
                           imageURL = "../gm_img/puzzle/fishdom.jpg"; 
-                          redirectURL = "https://example.com/flashparty";
+                          redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/puzzle/fishdom/review.jsp";
                       } else if (gameID == 23) {
                           imageURL = "../gm_img/puzzle/royalmatch.jpg";
-                          redirectURL = "https://example.com/flashparty";
+                          redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/puzzle/royalmatch/review.jsp";
                       } else if (gameID == 24) {
                           imageURL = "../gm_img/puzzle/tumutumu.jpg";
-                          redirectURL = "https://example.com/flashparty";
+                          redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/puzzle/tumutumu/review.jsp";
                       }
         
                       %>
@@ -337,13 +355,13 @@
                   int gameID = rs.getInt("game_id");
                   if (gameID == 10) {
                       imageURL = "../gm_img/adventure/dorakuewalk.jpg"; 
-                      redirectURL = "https://example.com/flashparty";
+                      redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/adventure/dorakuewalk/review.jsp";
                   } else if (gameID == 11) {
                       imageURL = "../gm_img/adventure/minecraft.jpg";
-                      redirectURL = "https://example.com/flashparty";
+                      redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/adventure/minecraft/review.jsp";
                   } else if (gameID == 12) {
                       imageURL = "../gm_img/adventure/pikmin.jpg";
-                      redirectURL = "https://example.com/flashparty";
+                      redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/adventure/pikmin/review.jsp";
                   }
     
                   %>
@@ -398,13 +416,13 @@
                   int gameID = rs.getInt("game_id");
                   if (gameID == 13) {
                       imageURL = "../gm_img/racing/asphalt9.jpg"; 
-                      redirectURL = "https://example.com/flashparty";
+                      redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/racing/asphalt9/review.jsp";
                   } else if (gameID == 14) {
                       imageURL = "../gm_img/racing/charisog.jpg";
-                      redirectURL = "https://example.com/flashparty";
+                      redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/racing/charisog/review.jsp";
                   } else if (gameID == 15) {
                       imageURL = "../gm_img/racing/mariokart.jpg";
-                      redirectURL = "https://example.com/flashparty";
+                      redirectURL = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/gm_app_review/racing/mariokart/review.jsp";
                   }
     
                   %>
@@ -679,21 +697,37 @@
 
 </div>
 
-<footer>
-  <p>フッターのコンテンツ</p>
+<footer class="footer-container">
+  <img src="../gm_img/icon-kiri.png" alt="GameVerseのロゴ" class="logo">
+  <h1>GameVerse</h1>
+  <span>&nbsp;</span>
+  <!--問い合わせ、採用情報ボタン-->
+  <div style="display: flex; flex-direction: row; gap: 10px;">
+    <button id="myButton" onclick="myFunction()">お問い合わせ</button>
+    <button id="myButton2" onclick="myFunction2()">採用情報</button>
+  </div>
+  <script>
+    function myFunction() {
+      window.location.href = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/main/toi.jsp"; // Replace with your desired URL
+    }
+  
+    function myFunction2() {
+      window.location.href = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/main/saiyo.jsp"; // Replace with your desired URL
+    }
+  </script>
 </footer>
 
 <!-- 掲示板 -->
 <!-- main.jspには追加書き込みと一覧表に飛べるボタン -->
 <div class="board">
     <h2>掲示板に書き込み</h2>
-    <form method="POST" action="http://pnw.cloud.cs.priv.teu.ac.jp:8080/c0a2107885/main/insertChat.jsp">
+    <form method="POST" action="http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/main/insertChat.jsp">
         <fieldset>
         <legend>データを入力する</legend>
           コメントID　<input size="20" type="text" name="reviewer_id" required><br>
           テキスト　<input size="20" type="text" name="review_text" required> <br>
           <input type="submit" value="送信">
-          <input type="button" value="一覧表" onclick="window.location.href='http://pnw.cloud.cs.priv.teu.ac.jp:8080/c0a2107885/board/ChatShowServlet';">
+          <input type="button" value="一覧表" onclick="window.location.href='http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/board/ChatShowServlet';">
         </fieldset>
       </form>
     </form>

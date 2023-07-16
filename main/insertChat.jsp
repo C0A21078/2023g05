@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Chatデータをデータベースに挿入する</title>
   <link rel="stylesheet" href="insert.css">
+  <link rel="icon" href="../gm_img/icon.jpg">
 </head>
 <style>
     title {

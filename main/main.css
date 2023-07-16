@@ -5,6 +5,26 @@ body {
   padding: 0;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 4px #333;
+  margin-left: 10px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
 /* ヘッダースタイル */
 header {
   background-color: #333;
@@ -19,31 +39,24 @@ nav {
 }
 
 
-/* サイドバースタイル */
 .sidebarR {
   background-color: #f2f2f2;
   padding: 15px;
-  width: 120px;
+  width: 200px;
   float: right;
 }
-.sidebarR h2 {
-  font-size: 18px;
-}
 
-.sidebarL {
-  background-color: #f2f2f2;
-  padding: 15px;
-  width: 120px;
-  float: left;
-}
-.sidebarL h2 {
-  font-size: 18px;
+.sidebarR img{
+  width: 200px;
+  height: 100px;
 }
 
 /* メインコンテンツスタイル */
 .main-content {
   padding: 20px;
-  margin-left: 220px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
 .genre-content {
@@ -176,4 +189,35 @@ nav ul li a.active {
 
 .sidebarR ul li {
   margin-bottom: 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center; /* 中央に配置 */
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+}
+
+.footer-content {
+  text-align: center; /* 中央に配置 */
+  color: white;
+}
+
+.header-buttons {
+  margin-left: auto;
+  height: 140px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  margin-right: 5px;
+}
+
+.favorite-button {
+  margin-right: 10px;
 }

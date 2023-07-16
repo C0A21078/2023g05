@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>掲示板</title>
+        <link rel="icon" href="../gm_img/icon.jpg">
         <style>
             body {
                 font-family: Arial, sans-serif;

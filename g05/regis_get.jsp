@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <title>登録完了</title>
         <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="icon" href="../gm_img/icon.jpg">
     </head>     
 <body>
 <%

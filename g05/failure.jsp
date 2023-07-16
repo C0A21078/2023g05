@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <title>ログイン失敗</title>
+        <link rel="icon" href="../gm_img/icon.jpg">
         <link rel="stylesheet" type="text/css" href="login.css">
     </head>     
 <body>

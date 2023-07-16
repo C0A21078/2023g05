@@ -6,7 +6,8 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>フラッシュパーティーのレビューページ</title>
+  <link rel="icon" href="../../../gm_img/icon.jpg">
+  <title>レビューページ</title>
   <style>
     .slider-container {
       position: relative;
@@ -202,7 +203,7 @@
 
   <div style="display: flex; align-items: center;">
     <img src="img/1.jpg" alt="アイコン">
-    <span style="font-size: 45px; font-weight: bold;">フラッシュパーティー</span>
+    <span style="font-size: 45px; font-weight: bold;">アスファルト9：Legends</span>
   </div>
 
   <div class="slider-container">
@@ -222,14 +223,27 @@
       <div class="collapse-toggle" onclick="closePopup();">閉じる</div>
       <div id="collapse-content">
         <p>
-          長文の説明文をここに記述します。
-          あああああああああああああああああああああ
-          あああああああああああああああああああああ
-          あああああああああああああああああああああ
+          ディズニーストアで大人気のぬいぐるみTSUM TSUM(ツムツム)を集めてつなげる簡単パズルゲームがLINEに登場！
+          ミッキーマウスや､ドナルドダック､くまのプーさんなどみんなが大好きなディズニーキャラクターが勢ぞろい！
+          遊び方はとっても簡単｡ぬいぐるみの「ツム」を３つつなげるだけ！
+          たくさんの種類のツムがあるから、集めて遊んでみよう！
         </p>
         <p>
-          この部分には任意の文章を追加できます。
-          あああああああああああああああああああああああ
+          【遊び方】
+          タイムアップまで、同じキャラクターのツムを3コ以上、なぞってつなげるだけ。
+          つなげた長さによってスコアが変わるから、できるだけ長くつなげて高得点を目指そう！
+        </p>
+          【ルール】
+          ・ツムは3コ以上つなげると消えて得点になるよ。
+          ・長くつなげるほど高得点！
+          ・たくさん消すとフィーバーになって高得点獲得のチャンス！
+          ・ツムを入手すれば「マイツム」としてゲームに登場。
+          ・マイツムはみんな特殊スキルを持ってるから上手く使おう。
+          ・攻略方法は人それぞれ、自分なりのスタイルでハイスコアを目指そう！
+        </p>
+        <p>
+          【対応機種・バージョンについて】
+           Android OS 4.1 以上に対応
         </p>
       </div>
     </div>
@@ -295,7 +309,7 @@
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/2023g05?serverTimezone=JST&useSSL=false", "2023g05", "2023g05");
 
     // ステートメントの作成とSQL文の実行
-    String sql = "SELECT star_rating, COUNT(*) as count FROM app_flashparty_review GROUP BY star_rating";
+    String sql = "SELECT star_rating, COUNT(*) as count FROM app_tumutumu_review GROUP BY star_rating";
     Statement stmt = con.createStatement();
     ResultSet rs = stmt.executeQuery(sql);
 
@@ -350,7 +364,7 @@
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/2023g05?serverTimezone=JST&useSSL=false", "2023g05", "2023g05");
 
     // ステートメントの作成とSQL文の実行
-    String sql = "SELECT * FROM app_flashparty_review";
+    String sql = "SELECT * FROM app_tumutumu_review";
     Statement stmt = con.createStatement();
     ResultSet rs = stmt.executeQuery(sql);
 
@@ -392,7 +406,7 @@
   <h3>レビューを投稿する</h3>
   <div class="form-container">
     <form action="reviewInsert.jsp" method="post">
-      <label for="userId">ユーザーID:</label>
+      <label for="userId">ユーザー名:</label>
       <input type="text" name="userId" required><br>
       <label for="rating">評価（1〜5）:</label>
       <input type="number" name="rating" min="1" max="5" required><br>

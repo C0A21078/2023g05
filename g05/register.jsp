@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title>新規登録</title>
     <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="icon" href="../gm_img/icon.jpg">
 </head>
 
 <body>
