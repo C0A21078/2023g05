@@ -28,6 +28,7 @@
     }
 </style>
 <%
+    request.setCharacterEncoding("UTF-8");
     String msg = "";
     try {
         String reviewerId = request.getParameter("reviewer_id");    // レビュアーIDを取得
