@@ -37,6 +37,7 @@
     <h1>問い合わせを以下の内容で送信しました</h1>
     <%
         // フォームから送信されたデータを取得
+        request.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
         String furigana = request.getParameter("furigana");
         String email = request.getParameter("email");
