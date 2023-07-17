@@ -82,11 +82,8 @@
   <img src="../gm_img/Ad/bb3.png" alt="Ad 3">
   <img src="../gm_img/Ad/bb4.png" alt="Ad 4">
   <a href="http://pnw.cloud.cs.priv.teu.ac.jp:8080/c0a2107885/main/main.jsp">緊急用URL⇒テスト環境へ<br>
-                                                                             (ローカルではない)<br>                   
-                                                                             以下の機能で日本語だけ<br>
-                                                                             文字化けするので<br>
-                                                                             「レビューの追記,<br>掲示板の追記」<br>
-                                                                            また、掲示板の更新と<br>削除が動かないため<br></a>
+                                                                             (ローカルではない)<br>
+                                                                            掲示板の更新と<br>削除が動かないため<br></a>
 </div>
   
 
@@ -729,8 +726,8 @@
     <h2>掲示板に書き込み</h2>
     <form method="POST" action="http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/main/insertChat.jsp">
         <fieldset>
-        <legend>データを入力する</legend>
-          コメントID　<input size="20" type="text" name="reviewer_id" required><br>
+        <legend>メッセージを送る</legend>
+          ユーザー名　<input size="20" type="text" name="reviewer_id" required><br>
           テキスト　<input size="20" type="text" name="review_text" required> <br>
           <input type="submit" value="送信">
           <input type="button" value="一覧表" onclick="window.location.href='http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/board/ChatShowServlet';">

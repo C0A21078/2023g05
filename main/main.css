@@ -210,7 +210,6 @@ nav ul li a.active {
 }
 
 .search-bar {
-  display: flex;
   align-items: center;
 }
 
