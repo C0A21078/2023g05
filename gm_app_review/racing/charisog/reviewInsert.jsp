@@ -4,6 +4,7 @@
 <%@ page import="java.util.*" %>
 
 <%
+  request.setCharacterEncoding("UTF-8"); 
   // ユーザーIDと入力された値を取得
   String userId = request.getParameter("userId");
   int rating = Integer.parseInt(request.getParameter("rating"));
