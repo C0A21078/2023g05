@@ -10,7 +10,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="login.css">
     <title>ログイン</title>
-    <link rel="icon" href="../gm_img/icon.jpg">
 </head>
 
 <body>
@@ -21,7 +20,8 @@
             <input class="uname" type="text" align="center" name="username" placeholder="Username" required>
             <input class="pass" type="password" align="center" name="password" placeholder="Password" required>
             <input class="submit" type="submit" align="center" value="ログイン"></a>
-            <p class="trans" align="center"><a href="register.jsp">新規登録</p>
+            <p class="trans" align="center"><a href="register.jsp">新規登録<class="trans" align="center"><a href="withdrawal.jsp">退会申請</p>
+            <!-- <p class="trans" align="center"><a href="withdrawal.jsp">退会申請</p> -->
         </div>
     </div>
 </body>
