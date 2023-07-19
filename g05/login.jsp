@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="login.css">
     <title>ログイン</title>
+    <link rel="icon" href="../gm_img/icon.jpg">
 </head>
 
 <body>

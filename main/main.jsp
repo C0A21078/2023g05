@@ -52,7 +52,7 @@
       <button id="myButton" onclick="myFunction3()">お気に入り</button>
       <script>
       function myFunction3() {
-        window.location.href = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/main/add_favorite.jsp";
+        window.location.href = "http://pnw.cloud.cs.priv.teu.ac.jp:8080/2023g05/myWork/add_favorite.jsp";
       }
       </script>
       </div>

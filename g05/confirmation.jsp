@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <title>退会確認</title>
+        <link rel="icon" href="../gm_img/icon.jpg">
         <link rel="stylesheet" type="text/css" href="login.css">
     </head>     
 <body>
